@@ -1,5 +1,3 @@
-# author - Richard Liao
-# Dec 26 2016
 import numpy as np
 import pandas as pd
 import cPickle
@@ -150,7 +148,7 @@ class AttLayer(Layer):
         super(AttLayer, self).build(input_shape)
 
     def compute_mask(self, inputs, mask=None):
-        return mask
+        return None
 
     def call(self, x, mask=None):
         # size of x :[batch_size, sel_len, attention_dim]
